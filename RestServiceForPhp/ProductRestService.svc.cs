@@ -11,8 +11,9 @@ namespace RestServiceForPhp
     // NOTE: In order to launch WCF Test Client for testing this service, please select ProductRestService.svc or ProductRestService.svc.cs at the Solution Explorer and start debugging.
     public class ProductRestService : IProductRestService
     {
-        public void DoWork()
+        public List<Product> GetProductList()
         {
+            return Products.Instance.ProducktList;
         }
     }
 }
