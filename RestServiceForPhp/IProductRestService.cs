@@ -17,25 +17,25 @@ namespace RestServiceForPhp
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json,
              BodyStyle = WebMessageBodyStyle.Bare,
-             UriTemplate = "GetProduct/(id)")]
+             UriTemplate = "GetProduct/{id}")]
         Product GetProductById(string id);
 
         [OperationContract]
         [WebInvoke(Method = "POST", ResponseFormat = WebMessageFormat.Json,
              BodyStyle = WebMessageBodyStyle.Bare,
-             UriTemplate = "PostProduct/(id)")]
+             UriTemplate = "PostProduct/{id}")]
         bool NewProduct(string id, Product item);
 
         [OperationContract]
         [WebInvoke(Method = "PUT", ResponseFormat = WebMessageFormat.Json,
              BodyStyle = WebMessageBodyStyle.Bare,
-             UriTemplate = "PutProduct/(id)")]
+             UriTemplate = "PutProduct/{id}")]
         bool UpdatedProduct(string id, Product item);
 
         [OperationContract]
         [WebInvoke(Method = "DELETE", ResponseFormat = WebMessageFormat.Json,
              BodyStyle = WebMessageBodyStyle.Bare,
-             UriTemplate = "DeleteProduct/(id)")]
+             UriTemplate = "DeleteProduct/{id}")]
         bool DeleteProduct(string id);
     }
 }
